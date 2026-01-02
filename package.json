@@ -1,0 +1,20 @@
+{
+  "name": "slides",
+  "version": "0.0.1",
+  "description": "Present your slides using reveal.js",
+  "homepage": "https://github.com/trutzio/slides#readme",
+  "bugs": {
+    "url": "https://github.com/trutzio/slides/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:trutzio/slides.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Christian Trutz <christian@trutz.io>",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
