@@ -13,12 +13,13 @@
   "license": "Apache-2.0",
   "author": "Christian Trutz <christian@trutz.io>",
   "type": "commonjs",
-  "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
     "@fastify/static": "7.0.4",
+    "@fastify/view": "9.1.0",
+    "ejs": "3.1.10",
     "fastify": "4.29.1",
     "reveal.js": "5.2.1"
   }

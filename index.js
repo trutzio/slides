@@ -1,9 +1,27 @@
 const fastify = require("fastify")({ logger: true });
 const fastify_static = require("@fastify/static");
+const fastify_view = require("@fastify/view");
 const path = require("node:path");
 
+fastify.register(fastify_view, {
+  engine: {
+    ejs: require("ejs"),
+  },
+});
+
+fastify.get("/:file", (req, reply) => {
+  reply.view("index.ejs", {
+    language: "de",
+    title: "Test slide",
+    theme: "night",
+    highlight_theme: "monokai",
+    markdown: req.params.file,
+  });
+});
+
 fastify.register(fastify_static, {
-  root: path.join(__dirname, "public"),
+  root: path.join(__dirname, "md"),
+  prefix: "/md/",
 });
 
 fastify.register(fastify_static, {
